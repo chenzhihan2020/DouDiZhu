@@ -6,7 +6,6 @@ from config import config
 from utils.unpack import history_regularize, to_cuda
 import numpy as np
 import torch
-from abs1 import Agent as AgentD
 
 
 class Agent:
