@@ -34,6 +34,7 @@ void GameEnv::set_period(int __period) {
 }
 
 void GameEnv::move_type1(Action& action) {
+    // play
 	int* cards_required = action.to_array();
 	hand_cards_num[curr_player] -= action.num();
 	for(int i = 0; i < 15; i ++) {
@@ -48,6 +49,7 @@ void GameEnv::move_type1(Action& action) {
 }
 
 void GameEnv::move_type2(Action& action) {
+    // bid
 	policy.push_back(action.action);
 
 	if(policy.size() == 3) {
@@ -73,6 +75,7 @@ void GameEnv::move_type2(Action& action) {
 }
 
 void GameEnv::move_type3(int _action=-1) {
+    // landlord add 3 cards
 	policy.push_back(-1);
 	int idx = int(policy.size()) - 3;
 	int c = 0;

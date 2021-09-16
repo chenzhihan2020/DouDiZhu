@@ -57,6 +57,10 @@ class Data:
 				init0, p0, v0 = data[0]
 				init1, p1, v1 = data[1]
 				init2, p2, v2 = data[2]
+				print(data[0])
+				print(data[1])
+				print(data[2])
+				input()
 				
 				self.data.append((file, init0, 0, p0, v0))
 				self.data.append((file, init1, 1, p1, v1))
